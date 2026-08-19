@@ -4,7 +4,7 @@ Welcome to my **Backend Projects** repository!
 
 This repository contains a collection of projects I'm building while learning **backend development and Node.js**.
 
-The projects are focused on understanding how JavaScript works outside the browser, how programs interact with the file system, how command-line applications work, and how data can be stored and managed.
+The projects focus on understanding how JavaScript works outside the browser, how programs interact with the file system, how command-line applications work, and how data can be stored and managed.
 
 ---
 
@@ -45,10 +45,11 @@ More technologies will be added as the repository grows.
 
 ## 📂 Projects
 
-| Project | Description |
-| --- | --- |
-| 📝 CLI Todo App | A command-line Todo application that allows users to add, list, and remove tasks. Tasks are stored persistently in a JSON file. |
-| 🚧 More Projects Coming Soon | This repository will be expanded with more backend projects as I continue learning. |
+| Project                      | Description                                                                                                                                                           |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 📝 CLI Todo App              | A command-line Todo application that allows users to add, list, and remove tasks. Tasks are stored persistently in a JSON file.                                       |
+| 💰 CLI Expense Tracker       | A command-line Expense Tracker that allows users to add, list, delete, and calculate the total of their expenses. Expense data is stored persistently in a JSON file. |
+| 🚧 More Projects Coming Soon | This repository will be expanded with more backend projects as I continue learning.                                                                                   |
 
 ---
 
@@ -64,7 +65,7 @@ Add a task:
 
 ```bash
 node todo.js add "buy milk"
-````
+```
 
 List tasks:
 
@@ -84,7 +85,49 @@ The application stores tasks inside:
 tasks.json
 ```
 
-The Todo App helped me practice working with Node.js, the file system, JSON data, command-line arguments, and array methods.
+The Todo App helped me practice working with Node.js, the file system, JSON data, command-line arguments, arrays, and array methods.
+
+---
+
+## 💰 CLI Expense Tracker
+
+The second project is a command-line Expense Tracker built with Node.js.
+
+It allows users to manage expenses directly from the terminal.
+
+### Available Commands
+
+Add an expense:
+
+```bash
+node expense.js add "Food" 250
+```
+
+List expenses:
+
+```bash
+node expense.js list
+```
+
+Calculate total expenses:
+
+```bash
+node expense.js total
+```
+
+Delete an expense:
+
+```bash
+node expense.js delete 2
+```
+
+The application stores expense data inside:
+
+```text
+expenses.json
+```
+
+The Expense Tracker helped me practice working with objects, `filter()`, `forEach()`, `reduce()`, number conversion, and persistent JSON data.
 
 ---
 
@@ -92,7 +135,7 @@ The Todo App helped me practice working with Node.js, the file system, JSON data
 
 The projects in this repository are designed to gradually introduce backend concepts.
 
-The current Todo App follows a simple flow:
+The current projects follow a similar basic flow:
 
 ```text
 User
@@ -103,27 +146,29 @@ Node.js
   ↓
 Application Logic
   ↓
-File System
+Load Data
   ↓
-tasks.json
+Modify / Process Data
+  ↓
+Save Data
 ```
 
-For example:
+For example, adding an expense:
 
 ```text
-node todo.js add "buy milk"
+node expense.js add "Food" 250
               ↓
           process.argv
               ↓
-           addTask()
+       addExpenses()
               ↓
-         loadTasks()
+       loadExpenses()
               ↓
-        Add new task
+       Add new expense
               ↓
-         saveTasks()
+       saveExpenses()
               ↓
-         tasks.json
+        expenses.json
 ```
 
 ---
@@ -139,6 +184,8 @@ node todo.js add "buy milk"
 * `fs.writeFileSync()`
 * Reading files
 * Writing files
+* Buffers
+* `.toString()`
 * JSON
 * `JSON.parse()`
 * `JSON.stringify()`
@@ -153,7 +200,10 @@ node todo.js add "buy milk"
 * `.push()`
 * `.filter()`
 * `.forEach()`
+* `.reduce()`
 * Array indexes
+* `parseInt()`
+* `parseFloat()`
 * Template literals
 * Conditional statements
 * `try...catch`
@@ -173,12 +223,14 @@ I'm currently practicing:
 * Running JavaScript using Node.js
 * Working with the file system
 * Reading and writing data
-* Using JSON for data storage
+* Using JSON for simple data storage
 * Receiving input from the terminal
 * Building command-line applications
 * Managing data using arrays and objects
 * Creating reusable functions
 * Handling errors
+* Using array methods to manipulate data
+* Calculating values from stored data
 * Understanding how application logic interacts with stored data
 * Breaking larger problems into smaller functions
 * Debugging problems and understanding why they happen
@@ -268,5 +320,3 @@ The goal is progress — **learning by building, breaking, debugging, and rebuil
 ## 👨‍💻 Author
 
 **Ramit Sarker**
-```
-```
